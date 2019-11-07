@@ -67,3 +67,21 @@ int scnI(){//fazer um scan de um integer e retornar o mesmo
 void scnS(char s[]){//recebe uma string, scanea ela e muda o seu valor
 	scanf(" %s", s);
 }
+float maior(float valores[], int tam){//recebe um vetor de floats e o tamanho, retorna o malor valor do
+  float maior;
+  int trocou = 0;
+  while(trocou != 1){
+    trocou = 1;
+    for(int z = 0; z < tam - 1; z++){
+      if(valores[z] < valores[z + 1]){
+        float aux;
+        aux = valores[z];
+        valores[z] = valores[z + 1];
+        valores[z + 1] = aux;
+        trocou = 0;
+      }
+    }
+  }
+  maior = valores[0];
+  return maior;
+}
