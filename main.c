@@ -5,11 +5,9 @@
 
 int main()
 {
-
-	float z, y[3] = {5.7, 5.7, 6.345};
-	int x;
-	z = functionSomaIntervalo(2, 12);
+	float z = 20, y[2] = {z, 2};
+	pr("computador\n");
+	z = functionMultiplicacao(y, 2);
 	prf(z, -7);
-
 	return 0;
 }

@@ -141,3 +141,12 @@ float functionMediaVetor(float valores[], int tamanho){
 	float media = functionSomarVetor(valores, tamanho) / tamanho;
 	return media;
 }
+/*****######*****/
+float functionMultiplicacao(float valores[], int tamanho){
+	float total = valores[0];
+	for (int i = 1; i < tamanho; ++i)
+	{
+		total *= valores[i];
+	}
+	return total;
+}
