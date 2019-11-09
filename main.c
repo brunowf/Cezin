@@ -8,9 +8,8 @@ int main()
 
 	float z, y[3] = {5.7, 5.7, 6.345};
 	int x;
-	z = functionSomarVetor(y);
-	x = sizeof(y)/4;
-	prf(x, 3);
+	z = functionSomaIntervalo(2, 12);
+	prf(z, -7);
 
 	return 0;
 }

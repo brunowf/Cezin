@@ -1,7 +1,6 @@
 /*****fv0001*****/
-float functionSomarVetor(float valores[]){
+float functionSomarVetor(float valores[], int tamanho){
 	float total = 0;
-	int tamanho = sizeof(valores) / sizeof(valores[0]);
 	for(int i = 0; i < tamanho; ++i){
 		total+=(float)(valores[i]);
 	}
@@ -122,4 +121,23 @@ float functionConverterParaFahrenheit(float celsius){
 	float fahren;
 	fahren = (((float)celsius / 5.0) * 9.0) + 32;
 	return fahren;
+}
+
+/*****fe0002*****/
+int functionSomaIntervalo(int numero1, int numero2){
+	float vetor[2] = {numero1, numero2};
+	int somaIntervalo = 0;
+	int menor = functionRetornarMenorNumero(vetor, 2);
+	int maior = functionRetornarMaiorNumero(vetor, 2);
+	for (int i = menor; i <= maior; ++i)
+	{
+		somaIntervalo += i;
+	}
+	return somaIntervalo;
+}
+
+/*****fv0004*****/
+float functionMediaVetor(float valores[], int tamanho){
+	float media = functionSomarVetor(valores, tamanho) / tamanho;
+	return media;
 }
