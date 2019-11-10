@@ -1,28 +1,29 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <math.h>
 #include "helpinho.h"
 
-/*
-int functionMDC(int numero1, int numero2){
-	int vetor[2] = {numero1, numero2};
-	int maior = functionRetornarMaiorNumero(vetor, 2), menor = functionRetornarMenorNumero(vetor, 2);
-}
-*/
 int main()
 {
-	float z = 20, y[2] = {3, 2};
-	pr("computador\n");
-	procedureReordenarVetorCrescente(y, 2);
-	for (int i = 0; i < 2; ++i)
-	{
-		prf(y[i], 2);
-		pr("\n");
-	}
-	for (int i = 0; i < 2; ++i)
-	{
-		prf(y[i], 2);
-		pr("\n");
-	}
+	float z = 20, y = 5, x = 10;
+	z = functionAreaQuadrado(y);
+	pr(" Quadrado: ");
+	prf(z, 9);
+	z = functionAreaRetangulo(y, x);
+	pr("\n Retangulo: ");
+	prf(z, 9);
+	z = functionAreaTriangulo(y, x);
+	pr("\n Triangulo: ");
+	prf(z, 9);
+	z = functionAreaTrapezio(y, x, 10);
+	pr("\n Trapezio: ");
+	prf(z, 9);
+	z = functionAreaLosango(y, x);
+	pr("\n Losango: ");
+	prf(z, 9);
+	z = functionAreaCirculo(3);
+	pr("\n Circulo: ");
+	prf(z, 9);
 	return 0;
 }
