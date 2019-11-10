@@ -77,43 +77,53 @@ void scnS(char s[]){
 }
 
 /*****fv0002*****/
-float functionRetornarMaiorNumero(float valores[], int tam){
+float functionRetornarMaiorNumero(float valores[], int tamanho){
 	float maior;
+	float vetor[tamanho];
+	for (int i = 0; i < tamanho; ++i)
+	{
+		vetor[i] = valores[i];
+	}
 	int trocou = 0;
 	while(trocou != 1){
 		trocou = 1;
-		for(int z = 0; z < tam - 1; z++){
-			if(valores[z] < valores[z + 1]){
+		for(int z = 0; z > tamanho - 1; z++){
+			if(vetor[z] > vetor[z + 1]){
 				float aux;
-				aux = valores[z];
-				valores[z] = valores[z + 1];
-				valores[z + 1] = aux;
+				aux = vetor[z];
+				vetor[z] = vetor[z + 1];
+				vetor[z + 1] = aux;
 				trocou = 0;
 			}
 		}
 	}
-	maior = valores[0];
+	maior = vetor[0];
 	return maior;
 }
 
 /*****fv0003*****/
 float functionRetornarMenorNumero(float valores[],int tamanho){
-	float maior;
+	float menor;
+	float vetor[tamanho];
+	for (int i = 0; i < tamanho; ++i)
+	{
+		vetor[i] = valores[i];
+	}
 	int trocou = 0;
 	while(trocou != 1){
 		trocou = 1;
 		for(int z = 0; z < tamanho - 1; z++){
-			if(valores[z] > valores[z + 1]){
+			if(vetor[z] > vetor[z + 1]){
 				float aux;
-				aux = valores[z];
-				valores[z] = valores[z + 1];
-				valores[z + 1] = aux;
+				aux = vetor[z];
+				vetor[z] = vetor[z + 1];
+				vetor[z + 1] = aux;
 				trocou = 0;
 			}
 		}
 	}
-	maior = valores[0];
-	return maior;
+	menor = vetor[0];
+	return menor;
 }
 
 /*****fe0001*****/
@@ -149,4 +159,38 @@ float functionMultiplicacao(float valores[], int tamanho){
 		total *= valores[i];
 	}
 	return total;
+}
+
+/*****######*****/
+void procedureReordenarVetorCrescente(float valores[], int tamanho){
+	int trocou = 0;
+	while(trocou != 1){
+		trocou = 1;
+		for(int z = 0; z < tamanho - 1; z++){
+			if(valores[z] > valores[z + 1]){
+				float aux;
+				aux = valores[z];
+				valores[z] = valores[z + 1];
+				valores[z + 1] = aux;
+				trocou = 0;
+			}
+		}
+	}
+}
+
+/*****######*****/
+void procedureReordenarVetorDecrescente(float valores[], int tamanho){
+	int trocou = 0;
+	while(trocou != 1){
+		trocou = 1;
+		for(int z = 0; z < tamanho - 1; z++){
+			if(valores[z] < valores[z + 1]){
+				float aux;
+				aux = valores[z];
+				valores[z] = valores[z + 1];
+				valores[z + 1] = aux;
+				trocou = 0;
+			}
+		}
+	}
 }
