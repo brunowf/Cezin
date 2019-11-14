@@ -1,4 +1,4 @@
-<h4>helpinho contém funções e procedimentos para facilitar a vida do programador C<br/><h4>
+<h4>helpinho contém funções e procedimentos para facilitar a vida do programador C<br/></h4>
 <h2>#procedimentos básicos<br/></h2>
 <ul>
 	<li><b>p00001</b>--pr(string)/*****recebe e imprimi uma string*****/<br/></li>
