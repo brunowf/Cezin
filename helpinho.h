@@ -238,3 +238,94 @@ float functionAreaLosango(float diagonal1, float diagonal2){
 float functionAreaCirculo(float raio){
 	return ((raio * raio) * M_PI);
 }
+
+/***** f00003 *****/
+float functionCalculadora(float numero1, float numero2, char operacao){
+	float resultado;
+	switch(operacao){
+		case '+':
+		resultado = numero1 + numero2;
+		break;
+		case '-':
+		resultado = numero1 - numero2;
+		break;
+		case '/':
+		if (numero2 == 0)
+		{
+			resultado = 0;
+		}else{
+			resultado = numero1 / numero2;
+		}
+		break;
+		case '*':
+		resultado = numero1 * numero2;
+		break;
+		default:
+		resultado = numero1 + numero2;
+		break;
+	}
+	return resultado;
+}
+
+/***** fe0010 *****/
+float functionFatorial(float numero){
+	float total = 1;
+	for (int i = 1; i <= numero; ++i)
+	{
+		total = total * i;
+	}
+	return total;
+}
+
+/***** fb0001 *****/
+int functionBoolPrimo(int numero){
+	int resultado = 1;
+	for (int i = 2; i < numero; ++i)
+	{
+		if ((numero % i) == 0)
+		{
+			resultado = 0;
+			i += numero;
+		}
+	}
+	if (numero == 1)
+	{
+		resultado = 0;
+	}
+	return resultado;//se == 1, numero = primo, se não, numero = não primo
+}
+
+/***** pv0003 *****/
+void procedureScanVetor(float vetor[], int tamanho){
+	for (int i = 0; i < tamanho; ++i)
+	{
+		vetor[i] = scnF();
+	}
+}
+
+/***** fb0002 *****/
+float functionBoolContemNoVetor(float numero, float vetor[], int tamanho){
+	float resultado = 0;
+	for (int i = 0; i < tamanho; ++i)
+	{
+		if (vetor[i] == numero)
+		{
+			resultado = 1;
+			i += tamanho;
+		}
+	}
+	return resultado;
+}
+
+/***** pv0004 *****/
+void procedureEncherVetorAleatorio(float vetor[], int tamanho, int parametroRand){
+	for (int i = 0; i < tamanho; ++i)
+	{
+		if (parametroRand == 0)
+		{
+			vetor[i] = rand();
+		}else{
+			vetor[i] = rand() % parametroRand;
+		}
+	}
+}
