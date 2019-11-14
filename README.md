@@ -9,11 +9,14 @@
 <ul>
 	<li><b>pv0001</b>--procedureReordenarVetorCrescente(float[], int)/*****recebe um vetor e seu tamanho, então reordena o mesmo em ordem crescente*****/</li>
 	<li><b>pv0002</b>--procedureReordenarVetorCrescente(float[], int)/*****recebe um vetor e seu tamanho, então reordena o mesmo em ordem decrescente*****/</li>
+	<li><b>pv0003</b>--procedureScanVetor(float[], int)/*****recebe um vetor e seu tamanho, então faz scnF para cada lugar do vetor*****/</li>
+	<li><b>pv0004</b>--procedureEncherVetorAleatorio(float[], int, int)/*****recebe um vetor seu tamanho e um número x,rand() % x para cada lugar do vetor, se x = 0 então só será efetuado rand()*****/</li>
 </ul>
 <h2>#funções básicas<br/></h2>
 <ul>
 	<li><b>f00001</b>--scnF()/*****scanea float e return no mesmo*****/</li>
 	<li><b>f00002</b>--scnI()/*****scanea int e return no mesmo*****/</li>
+	<li><b>f00003</b>--functionCalculadora(float, float, char)/*****recebe 2 números e a operação, então retorna o resultado*****/</li>
 </ul>
 <h2>#funções com vetores<br/></h2>
 <ul>
@@ -34,4 +37,10 @@
 	<li><b>fe0007</b>--functionAreaTrapezio(float)/*****recebe as 2 bases e a altura de um Trapézio e retorna sua área*****/</li>
 	<li><b>fe0008</b>--functionAreaLosango(float)/*****recebe as 2 diagonais de um Trapézio e retorna sua área*****/</li>
 	<li><b>fe0009</b>--functionAreaCirculo(float)/*****recebe o de um Círculo e retorna sua área*****/</li>
+	<li><b>fe0010</b>--functionFatorial(float)/*****recebe um número e retorna seu fatorial(3! = 1*2*3)*****/</li>
+</ul>
+<h2>#funções bool</h2>
+<ul>
+	<li><b>fb0001</b>--functionBoolPrimo(int)/*****recebe um número e se este for primo retorna 1, caso não retorna 0*****/</li>
+	<li><b>fb0002</b>--functionBoolContemNoVetor(float, float[], int)/*****recebe um número x e um vetor com seu tamanho, se vetor contem x então o retorno será 1, caso não retorna 0*****/</li>
 </ul>
