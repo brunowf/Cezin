@@ -48,7 +48,7 @@ void prf(float numero, int virgula){
 		break;
 
 		case 8:
-		printf("%f", (float)numero);
+		printf("%.8f", (float)numero);
 		break;
 
 		default:

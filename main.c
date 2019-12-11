@@ -1,12 +1,15 @@
-#include <stdio.h>
+/*#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 #include <math.h>
 #include "helpinho.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <conio.h>
+#include "pointers.h"*/
+#include "init.h"
 
-
-
-void procedureNumerosRepetidosVetor(float vetor[], int tamanho){//Revisar
+/*void procedureNumerosRepetidosVetor(float vetor[], int tamanho){//Revisar
 	float matriz[tamanho][2];
 	for (int i = 0; i < tamanho; ++i)
 	{
@@ -70,12 +73,9 @@ void procedureSequenciaFibonacci(float vetor[], int tamanho){
 		}
 	}
 }
-
+*/
 int main()
 {
-	int y = 10;
-	float z[y];
-	procedureSequenciaFibonacci(z, y);
-	procedureImprimeVetor(z, y);
-	return 0;
+	initializer();
+  return 0;
 }
